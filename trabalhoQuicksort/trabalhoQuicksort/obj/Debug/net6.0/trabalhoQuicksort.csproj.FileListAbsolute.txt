@@ -1,0 +1,15 @@
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\bin\Debug\net6.0\trabalhoQuicksort.exe
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\bin\Debug\net6.0\trabalhoQuicksort.deps.json
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\bin\Debug\net6.0\trabalhoQuicksort.runtimeconfig.json
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\bin\Debug\net6.0\trabalhoQuicksort.dll
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\bin\Debug\net6.0\trabalhoQuicksort.pdb
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.csproj.AssemblyReference.cache
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.AssemblyInfoInputs.cache
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.AssemblyInfo.cs
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.csproj.CoreCompileInputs.cache
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.dll
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\refint\trabalhoQuicksort.dll
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.pdb
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\trabalhoQuicksort.genruntimeconfig.cache
+C:\Users\barce\source\repos\trabalhoQuicksort\trabalhoQuicksort\obj\Debug\net6.0\ref\trabalhoQuicksort.dll
