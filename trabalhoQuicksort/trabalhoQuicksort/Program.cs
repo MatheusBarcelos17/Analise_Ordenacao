@@ -2,6 +2,14 @@
 
 namespace trabalhoQuicksort
 {
+    public class Global
+    {
+        public static int MovimentacoesQuicksort { get; set; }
+        public static int ComparacoesQuicksort { get; set; }
+        public static int MovimentacoesInsertionSort { get; set; }
+        public static int ComparacoesInsertionSort { get; set; }
+
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -13,11 +21,25 @@ namespace trabalhoQuicksort
             tamanhoArray = leTamanhoArray();
             int[] arr = new int[tamanhoArray];
             int[] sorted = new int[tamanhoArray];
+            int[] sortedQuickSortClassico = new int[tamanhoArray];
             int quatidadeSubvetores = qtdSubvetores(tamanhoArray);
             int escalaDivisao = tamanhoArray / quatidadeSubvetores;
-            criaArray(ref arr, tamanhoArray);
+            arr = criaArray(tamanhoArray);
             int posicaofinal = arr.Length / quatidadeSubvetores;
-            imprimeArray(ref arr, ordenado);
+
+            Console.WriteLine("Impressão do array desordenado");
+            imprimeArray(arr, ordenado);
+            Console.WriteLine();
+            Console.WriteLine();
+            //Console.WriteLine("Impressão do método QuickSort clássico");
+            //sortedQuickSortClassico = QuickSort(arr, positionInicial, arr.Length);
+            //imprimeArray(sortedQuickSortClassico, ordenado = true);
+
+            //Console.WriteLine("Impressão do método InsertionSort clássico");
+            //int[] sortedInsertionClassico = insertionSort(arr);
+            //imprimeArrayOrdenadoInsertion(sortedInsertionClassico);
+
+            Console.WriteLine("Impressão do QuickSort + InsertionSort");
 
             while (tamanhoArray != 0)
             {
@@ -28,10 +50,10 @@ namespace trabalhoQuicksort
                 cont++;
             }
             ordenado = true;
-            imprimeArray(ref sorted, ordenado);
+            imprimeArray(sorted, ordenado);
 
             int[] sortedInsertion = insertionSort(sorted);
-            imprimeArrayOrdenadoInsertion(ref sortedInsertion);
+            imprimeArrayOrdenadoInsertion(sortedInsertion);
             Console.WriteLine();
             Console.ReadKey();
         }
@@ -41,11 +63,11 @@ namespace trabalhoQuicksort
             return tamanhoArray / (tamanhoArray / 10);
         }
 
-        private static void imprimeArray(ref int[] arr, bool flagOrdenado)
+        private static void imprimeArray(int[] arr, bool flagOrdenado)
         {
             if (!flagOrdenado)
             {
-                Console.WriteLine("Elementos do Vetor principal");
+              //  Console.WriteLine("Elementos do Vetor principal");
                 foreach (int elementos in arr)
                 {
                     Console.Write(elementos + " ");
@@ -54,28 +76,32 @@ namespace trabalhoQuicksort
             }
             if (flagOrdenado)
             {
-                Console.WriteLine("Elementos do Vetor principal Ordenado");
+               // Console.WriteLine("Elementos do Vetor principal Ordenado");
                 foreach (int elementos in arr)
                 {
                     Console.Write(elementos + " ");
                 }
                 Console.WriteLine();
+                Console.WriteLine("Número de movimentações do QuickSort: " + Global.MovimentacoesQuicksort);
+                Console.WriteLine("Número de comparações do QuickSort: " + Global.ComparacoesQuicksort);
             }
         }
 
-        private static void imprimeArrayOrdenadoInsertion(ref int[] arr)
+        private static void imprimeArrayOrdenadoInsertion(int[] arr)
         {
-            Console.WriteLine("Elementos do Vetor Ordenado com insertion");
+          //  Console.WriteLine("Elementos do Vetor Ordenado com insertion");
             foreach (int elementos in arr)
             {
                 Console.Write(elementos + " ");
             }
             Console.WriteLine();
+            Console.WriteLine("Número de movimentações do InsertionSort: " + Global.MovimentacoesInsertionSort);
+            Console.WriteLine("Número de comparações do InsertionSort: " + Global.ComparacoesInsertionSort);
         }
 
         public static int leTamanhoArray()
         {
-            Console.WriteLine("Digite o tamanho do array para ser ordenado");
+          Console.WriteLine("Digite o tamanho do array para ser ordenado");
 
             int tamanho = int.Parse(Console.ReadLine());
             bool multiploDez = ((tamanho % 10) == 0);
@@ -87,6 +113,7 @@ namespace trabalhoQuicksort
                     Console.WriteLine("Digite um tamanho multiplo de dez");
                     tamanho = int.Parse(Console.ReadLine());
                 }
+                multiploDez = ((tamanho % 10) == 0);
             }
 
             Console.WriteLine("Tamanho selecionado com sucesso, precione qualquer tecla para seguir");
@@ -95,14 +122,18 @@ namespace trabalhoQuicksort
             return tamanho;
         }
 
-        public static void criaArray(ref int[] vetorPrincipal, int quantidadeNumero)
+        public static int[] criaArray(int quantidadeNumero)
         {
+            int[] vetorPrincipal = new int[quantidadeNumero];
+
 
             Random rand = new Random();
             for (int i = 0; i < vetorPrincipal.Length; i++)
             {
                 vetorPrincipal[i] = rand.Next(quantidadeNumero);
             }
+
+            return vetorPrincipal;
         }
 
         public static void Swap(int[] arr, int i, int j)
@@ -127,12 +158,15 @@ namespace trabalhoQuicksort
         {
             int pivot = arr[start];
             int swapIndex = start;
+
             for (int i = start + 1; i < end; i++)
             {
+                Global.ComparacoesQuicksort ++;
                 if (arr[i] < pivot)
                 {
                     swapIndex++;
                     Swap(arr, i, swapIndex);
+                    Global.MovimentacoesQuicksort ++;
                 }
             }
             Swap(arr, start, swapIndex);
@@ -148,8 +182,10 @@ namespace trabalhoQuicksort
                 key = list[i];
                 j = i - 1;
 
+                Global.ComparacoesInsertionSort++;
                 while (j >= 0 && key < list[j])
                 {
+                    Global.MovimentacoesInsertionSort ++;
                     temp = list[j];
                     list[j] = list[j + 1];
                     list[j + 1] = temp;

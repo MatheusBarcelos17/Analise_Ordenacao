@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barce\\source\\repos\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj": {}
+    "C:\\Users\\barce\\source\\repos\\MatheusBarcelos17\\Analise_Ordenacao\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barce\\source\\repos\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj": {
+    "C:\\Users\\barce\\source\\repos\\MatheusBarcelos17\\Analise_Ordenacao\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barce\\source\\repos\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj",
+        "projectUniqueName": "C:\\Users\\barce\\source\\repos\\MatheusBarcelos17\\Analise_Ordenacao\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj",
         "projectName": "trabalhoQuicksort",
-        "projectPath": "C:\\Users\\barce\\source\\repos\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj",
+        "projectPath": "C:\\Users\\barce\\source\\repos\\MatheusBarcelos17\\Analise_Ordenacao\\trabalhoQuicksort\\trabalhoQuicksort\\trabalhoQuicksort.csproj",
         "packagesPath": "C:\\Users\\barce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barce\\source\\repos\\trabalhoQuicksort\\trabalhoQuicksort\\obj\\",
+        "outputPath": "C:\\Users\\barce\\Source\\Repos\\MatheusBarcelos17\\Analise_Ordenacao\\trabalhoQuicksort\\trabalhoQuicksort\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
